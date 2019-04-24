@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "default" {
 }
 
 resource "aws_iam_role" "default" {
-  name               = "${module.label.id}"
+  name               = "cicd-role"
   assume_role_policy = "${data.aws_iam_policy_document.assume.json}"
 }
 
